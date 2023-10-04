@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let seconds = +prompt("Please enter seconds");
+        (function(s = 0){
+            let hours = parseInt(s/3600)
+            let minute = parseInt(s/ 60)
+            let second = s % 60
+            document.write(hours + "hours, " + minute + "minutes," + second + "seconds")
+        })(seconds);
+    </script>
+</body>
+</html>

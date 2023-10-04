@@ -7,6 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        (function() {
+            let num = 10
+        })();
+        (function() {
+            let num = 20
+        })()
+        // purpose : avoid variable contamination
+        (function() {})()
+        (function(){} ())
+
+    </script>
 </body>
 </html>

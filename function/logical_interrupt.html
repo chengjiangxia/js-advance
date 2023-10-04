@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(x, y) {
+            // equal to set x default as 0
+            x = x || 0
+            y = y || 0
+            console.log(x + y)
+        }
+        fn()
+        // log out false
+        //start from left
+        console.log(false && 3 + 5)
+        let age = 18
+        console.log(false && age++)
+        //log 18 because false
+        console.log(age)
+
+        console.log(true || age++)
+        //stil 18 because || with true is always true
+        console.log(age)
+
+        console.log(11 && 22) //return the last true value
+        console.log(11 || 22) //return the first true calue
+
+        // logic && met false will break
+        // logic || met true will break
+
+        console.log(Boolean("pink"))
+        console.log(Boolean("pink"))
+        // only false when it is an empty string
+        console.log(Boolean(''))
+        //only false when a number is 0 
+        console.log(Boolean(0))
+        console.log(Boolean(-1))
+        //undenfined, null, false, NaN are all false, the rest are true
+    </script>
+</body>
+</html>
