@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pink = {
+            'abc' : 'aaa',
+            uname: 'chengjiang',
+            age : 18,
+            gender: 'male',
+            sayHi : function() {
+                console.log("Hello world!")
+            }
+        }
+        console.log(pink.age)
+        pink.age = 20
+        console.log(pink.age)
+        delete pink.age
+        console.log(pink.age)
+        pink.ss = '10'
+        console.log(pink.ss)
+        console.log(pink['abc'])
+        pink.sayHi()
+        //iterare an object
+        for (let k in pink) {
+            console.log(k)
+            console.log(pink[k])
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doucument</title>
+    <style>
+        table {
+            width: 600px;
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        tr {
+            height: 40px;
+            cursor: pointer;
+        }
+
+        table tr:nth-child(1) {
+            background-color: #ddd;
+        }
+
+        /* 第一行 鼠标放上去不要底色（背景色） */
+        table tr:not(:first-child):hover {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Student info</h2>
+
+    <table>
+        <caption>Student List</caption>
+        <tr>
+            <th>Number</th>
+            <th>Name</th>
+            <th>age</th>
+            <th>Gender</th>
+            <th>hometown</th>
+        </tr>
+
+        <!-- script 写到这里 -->
+        <script>
+            // 1. 数据准备
+            let students = [
+                { name: 'Ming', age: 18, gender: 'M', hometown: 'PA' },
+                { name: 'Olive', age: 19, gender: 'F', hometown: 'MO' },
+                { name: 'Crystal', age: 17, gender: 'M', hometown: 'NJ' },
+                { name: 'Alex', age: 18, gender: 'F', hometown: 'CA' },
+                { name: 'John', age: 16, gender: 'F', hometown: 'MA' }
+            ]
+            // 2. 渲染页面
+            for (let i = 0; i < students.length; i++) {
+                document.write(`
+                <tr>
+                    <td>${i + 1}</td>
+                    <td>${students[i].name}</td>
+                    <td>${students[i].age}</td>
+                    <td>${students[i].gender}</td>
+                    <td>${students[i].hometown}</td>
+                </tr>
+                `)
+            }
+        </script>
+    </table>
+</body>
+
+</html>

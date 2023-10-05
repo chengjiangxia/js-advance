@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>In Sales</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- 4. box start -->
+    <div class="box w">
+        <div class="box-hd">
+            <h3>In Sales</h3>
+            <a href="#">See All</a>
+        </div>
+        <div class="box-bd">
+            <ul class="clearfix">
+                
+                <script>
+                    let data = [
+                        {
+                            src: 'images/course01.png',
+                            title: 'Think PHP 5.0',
+                            num: 1125
+                        },
+                        {
+                            src: 'images/course02.png',
+                            title: 'Android dynamic image project',
+                            num: 357
+                        },
+                        {
+                            src: 'images/course03.png',
+                            title: 'Angular2 front end',
+                            num: 22250
+                        },
+                        {
+                            src: 'images/course04.png',
+                            title: 'Android APP project',
+                            num: 389
+                        },
+                        {
+                            src: 'images/course05.png',
+                            title: 'UGUI source code',
+                            num: 124
+                        },
+                        {
+                            src: 'images/course06.png',
+                            title: 'Kami2 index page',
+                            num: 432
+                        },
+                        {
+                            src: 'images/course07.png',
+                            title: 'Unity intro to advance',
+                            num: 888
+                        },
+                        {
+                            src: 'images/course08.png',
+                            title: 'Cocos deep learning',
+                            num: 590
+                        },
+                        {
+                            src: 'images/course04.png',
+                            title: 'auto panel',
+                            num: 1000
+                        }
+                    ]
+
+                    for (let i = 0; i < data.length; i++) {
+                        document.write(`
+                        <li>
+                            <img src=${data[i].src} title="${data[i].title}" />
+                            <h4>${data[i].title}</h4>
+                            <div class="info">
+                                <span>Advanced</span> • ${data[i].num}Learning
+                            </div>
+                        </li>`)
+                    }
+                </script>
+            </ul>
+        </div>
+    </div>
+    <!-- 4. box part -->
+</body>
+
+</html>
