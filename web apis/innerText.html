@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">this is the text content</div>
+    <script>
+        const box = document.querySelector(".box")
+        //change content
+        console.log(box.innerText)
+        const obj = {
+            name: "pink"
+        }
+        //inner text do not support tag change
+        box.innerText = "I am the box"
+        //innerHTML does
+        box.innerHTML = "<strong> This is Strong!!! </strong>"
+        
+    </script>
+</body>
+</html>

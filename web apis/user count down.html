@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user count down</title>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10">
+        User Registration Agreement
+        Welcome to register as a JD user! During your registration process, you will need to complete our registration steps and sign the following agreement online by clicking to agree. Please carefully read and fully understand the terms of the agreement before clicking agree (especially the terms marked in bold or underlined, as these terms may clearly specify the obligations you should fulfill or limit your rights).</textarea>
+    <br />
+    <button class="btn" disabled>I have read the user agreement(5)</button>
+
+    <script>
+        // 1. get element
+        const btn = document.querySelector('.btn')
+        console.log(btn.innerHTML) 
+        // 2. 倒计时
+        let i = 5
+        // 2.1 开启定时器
+        let n = setInterval(function () {
+            i--
+            btn.innerHTML = `I have read the user agreement(${i})`
+            if (i === 0) {
+                clearInterval(n) // 关闭定时器
+                // 定时器停了，我就可以开按钮
+                btn.disabled = false
+                btn.innerHTML = 'agree'
+            }
+        }, 1000)
+    </script>
+</body>
+
+</html>

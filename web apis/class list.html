@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            color: #333;
+        }
+        .active {
+            color: red;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Character</div>
+    <script>
+        //through class List
+        const box = document.querySelector(".box")
+        //class name do not need "."
+        // box.classList.add("active")
+        // box.classList.remove("box")
+        //toggle()
+        box.classList.toggle("active")
+        box.classList.toggle("active")
+    </script>
+</body>
+</html>

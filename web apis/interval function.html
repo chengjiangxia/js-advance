@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nu = setInterval(function(){
+            console.log('run once a second')
+        }, 1000)
+        function fn() {
+            console.log('once a second')
+        }
+        let number = setInterval(fn, 1000)
+        //return a time interval id number
+        console.log(number)
+        clearInterval(number)
+        clearInterval(nu)
+
+        let i = 1
+        setInterval(function(){
+            i++
+            document.write(i)
+        }, 1000)
+    </script>
+</body>
+</html>

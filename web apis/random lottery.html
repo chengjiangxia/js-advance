@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>case 06</title>
+    <style>
+        .wrapper {
+            width: 840px;
+            height: 420px;
+            background: url(./images/bg01.jpg) no-repeat center / cover;
+            padding: 100px 250px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <strong>lottery</strong>
+        <h1>first prize: <span id="one">???</span></h1>
+        <h2>second prize: <span id="two">???</span></h2>
+        <h3>third prize: <span id="three">???</span></h3>
+    </div>
+
+    <script>
+        // 1. define array
+        const personArr = ['Oliver', 'Peter', 'Crystal', 'Amy', 'Anna']
+        // 2 first prize
+        // 2.1 random number as index
+        const random = Math.floor(Math.random() * personArr.length)
+        // console.log(personArr[random])
+        // 2.2 get first index
+        const one = document.querySelector('#one')
+        // 2.3 apply to one
+        one.innerHTML = personArr[random]
+        // 2.4 delete person
+        personArr.splice(random, 1)
+        // console.log(personArr)
+
+        // 3 second prize
+        // 3.1 randome number
+        const random2 = Math.floor(Math.random() * personArr.length)
+        // 3.2 get second index
+        const two = document.querySelector('#two')
+        // 3.3 apply to name 2
+        two.innerHTML = personArr[random2]
+        // 3.4 delete name
+        personArr.splice(random2, 1)
+
+        // 4 third prize
+        // 4.1 get third number for index
+        const random3 = Math.floor(Math.random() * personArr.length)
+        // 4.2 apply to the third prize
+        const three = document.querySelector('#three')
+        // 4.3 
+        three.innerHTML = personArr[random3]
+        // 4.4 delete
+        personArr.splice(random3, 1)
+    </script>
+</body>
+
+</html>
