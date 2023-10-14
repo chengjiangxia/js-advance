@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-随机点名案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .box {
+            width: 600px;
+            margin: 50px auto;
+            display: flex;
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        .qs {
+
+            width: 450px;
+            height: 40px;
+            color: red;
+
+        }
+
+        .btns {
+            text-align: center;
+        }
+
+        .btns button {
+            width: 120px;
+            height: 35px;
+            margin: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Random Call</h2>
+    <div class="box">
+        <span>Name is:</span>
+        <div class="qs">Show name here</div>
+    </div>
+    <div class="btns">
+        <button class="start">start</button>
+        <button class="end">end</button>
+    </div>
+
+    <script>
+        // data array
+        const arr = ['Oliver', 'Peter', 'Amy', 'Anna', 'Toan']
+        
+        let timerId = 0
+        // random
+        let random = 0
+        // start button
+        const qs = document.querySelector('.qs')
+        // 1.1 get start object
+        const start = document.querySelector('.start')
+        // 1.2 add event listener
+        start.addEventListener('click', function () {
+            timerId = setInterval(function () {
+                // random number
+                random = parseInt(Math.random() * arr.length)
+                // console.log(arr[random])
+                qs.innerHTML = arr[random]
+            }, 35)
+
+            // if there is only one number
+            if (arr.length === 1) {
+                // start.disabled = true
+                // end.disabled = true
+                start.disabled = end.disabled = true
+            }
+        })
+
+        // 2. end button
+        const end = document.querySelector('.end')
+        end.addEventListener('click', function () {
+            clearInterval(timerId)
+            // end
+            arr.splice(random, 1)
+            console.log(arr)
+        })
+    </script>
+</body>
+
+</html>
